@@ -9,6 +9,10 @@
 ### Quick start
 **Make sure you have Node version >= 5.0 and NPM >= 3**
 
+```
+npm install -g webpack webpack-dev-server typings typescript
+```
+
 ```bash
 # clone our repo
 # --depth 1 removes all but one .git commit history
@@ -20,11 +24,7 @@ cd zetta-mux-ws-demoapp
 # install the repo with npm
 npm install
 
-# start the server
-npm start
-
-# use Hot Module Replacement
-npm run server:dev:hmr
+npm run server
 
 ```
 go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
