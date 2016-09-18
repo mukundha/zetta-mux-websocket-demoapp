@@ -21,7 +21,7 @@ git clone  https://github.com/mukundha/zetta-pub-sub-demoapp
 
 cd zetta-pub-sub-demoapp
 
-# install the repo with npm
+# Warning:this step might take few mins
 npm install
 
 npm run server
@@ -29,5 +29,5 @@ npm run server
 ```
 go to [http://0.0.0.0:3000](http://0.0.0.0:3000) or [http://localhost:3000](http://localhost:3000) in your browser
 
-
+> Go to [Zetta Browser](http://browser.zettajs.io/#/overview?url=http:%2F%2Flocalhost:1337%2F) to publish events to the [Zetta Pub-Sub Server](https://github.com/mukundha/zetta-pub-sub-server.git)
 
