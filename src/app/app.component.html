@@ -1,0 +1,58 @@
+<md-sidenav-layout [class.m2app-dark]="isDarkTheme">
+
+ <md-sidenav>
+      Start Sidenav.
+      <br>
+      <button md-button #mybutton >Close</button>
+    </md-sidenav>
+    
+  <md-toolbar color="primary">
+        MUltiplexed Websockets
+    <span class="app-toolbar-filler"></span>
+  </md-toolbar>
+
+
+  <div class="app-content">
+  <p>Have you stated your zetta hub?</p>
+  Visit <a href="http://browser.zettajs.io/#/overview?url=http:%2F%2Flocalhost:1337%2F">here</a> to publish events
+  <div layout="row" layout-wrap>
+    <div flex="20">
+      <h3>Topics</h3>
+        <div *ngFor="#k of keys()">
+            <md-slide-toggle (change)="subscribe(k,$event)" [(ngModel)]="topics[k].subscribed">
+              {{topics[k].topic}}
+            </md-slide-toggle>        
+          </div>
+      </div>
+      <md-divider></md-divider>
+    <div flex="80">
+      <h3>Events</h3>
+      <p class="card-description" *ngFor="#m of messages.slice().reverse()" style="padding-top: 20px">{{m}}
+      <md-divider></md-divider>
+      </p>
+    </div>
+  </div>
+
+    <!-- <md-tab-group>
+      <md-tab>
+        <template md-tab-label>Topics</template>
+        <template md-tab-content>
+
+           
+        </template>
+      </md-tab>
+      <md-tab>
+        <template md-tab-label>Messages</template>
+        <template md-tab-content>
+              
+      </template>
+      </md-tab>
+    </md-tab-group>   
+    <md-list flex>
+      
+    </md-list>  -->
+  </div>
+    
+
+</md-sidenav-layout>
+
